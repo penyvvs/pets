@@ -135,6 +135,7 @@ body {
         justify-content: center;
         width: 130px;
         height: 130px;
+        border: none;
         border-radius: 100%;
         background-color: #BABABA;
         img{
@@ -304,6 +305,7 @@ body {
 
 footer{
     margin-top: 80px;
+    width: 100%;
     background-color: #343435;
     padding: 40px 0;
 }
@@ -344,6 +346,74 @@ footer{
             &_info{
                 display: flex;
                 align-items: center;
+            }
+        }
+    }
+    &_item_2{
+        &_list{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: baseline;
+            height: 100%;
+            font-size: 36px;
+            li{
+                position: relative;
+                a{
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 5px;
+                        background-color: #3050ed;
+                        border-radius: 3px;
+                        position: absolute;
+                    }
+                    &:hover{
+                        &::after{
+                            transition: all 0.5s;
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 5px;
+                            background-color: #3050ed;
+                            border-radius: 3px;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_item_3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_social{
+            display: flex;
+            column-gap: 15px;
+            font-size: 48px;
+            a{
+                &:hover{
+                    transition: all 0.3s;
+                    color: #3050ed;
+                }
+            }
+        }
+        &_info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 200px;
+            font-size: 20px;
+            line-height: 26px;
+            a::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
             }
         }
     }
